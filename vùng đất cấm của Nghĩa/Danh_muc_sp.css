@@ -1,0 +1,292 @@
+.fontchu{
+    font-family: 'Exo', sans-serif;
+   }
+.danhmuc{
+    width: 1140px;
+    height: 1930px;
+    display: flex;
+    padding: 20px 10px 0 10px; 
+    margin: auto;
+}
+.allsp{
+    width: 855px;
+    height: 1885px;
+   
+}
+
+.tieude{
+    margin: 20px 10px 0 10px;
+    width: 835px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1c1c1c;
+    
+}
+.xepsp{
+    width: 835px;
+    height: 46px;
+    padding-bottom: 10px ;
+    display: flex;
+    margin-left: 10px;
+
+}
+.xeptheo{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    padding-top: -5px;
+}
+.check{
+   height:15px;
+   width: 15px;
+   border: 1px solid #a2a2a2;
+   border-radius: 50%;
+   margin-right : 5px;
+   position: relative;
+}
+.check::after{
+    content: '';
+    width:8px;
+    height:8px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.option:hover > .check::after{
+    background-color:#f6851d;
+    
+}
+.check:hover{
+    border: 1px solid #f6851d;
+    
+}
+.option{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    display: flex;
+   
+}
+.option:hover > .check {
+    border: 1px solid #f6851d;
+}
+ul.mo_danh_sach{
+    margin-top: 13px;
+    display: flex;
+    
+}
+li.khung_option{
+    
+    list-style: none;
+    padding-right:10px;
+}
+.danhsachsp{
+    max-width: 100%;
+    max-height:100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.sp{
+    width: 25%;
+    height: 289px;
+    
+}
+.anh{
+    overflow: hidden;
+    width: 194px;
+    height: 194px;
+    margin-left: 10px;  
+    position: relative;
+}
+.hinh1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px; 
+    opacity: 1;
+    transition: 0.4s;
+}
+.hinh2{
+    transform: translateY(30px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px; 
+    opacity: 0;
+    transition: 0.7s;
+}
+.sale{
+    position: absolute;
+    left: 133px;
+    width: 55px;
+    height: 28px;
+    background-color: red;
+    border-radius: 15px 15px 15px 15px;
+    z-index: 1;
+    
+    
+    
+
+}
+.num_sale{
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    margin: 7px 0px 0px 13px;
+}
+.anh:hover a .hinh2,.sp:hover .anh .hinh2{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.anh:hover a .hinh1,.sp:hover .anh .hinh1{
+    opacity: 0;
+}
+.anh:hover > .tensp{
+    color: #f6851d;
+}
+.tensp{
+    margin-top: -10px;
+    text-decoration: none;
+    width: 194px;
+    height: 31px;
+    margin-left: 10px; 
+    text-align: center;
+    overflow: hidden;
+    line-height: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+}
+.tensp:hover{
+    color: #f6851d;
+}
+.khunggia{
+    width: 194px;
+    height: 31px;
+    margin-left: 10px; 
+    text-align: center;
+}
+.giahientai{
+    color: #c0972f;
+    font-size: 13px;
+    font-weight: 500;
+    
+}
+.giacu{
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #a2a2a2;
+}
+.locsp{
+    width: 275px;
+    height:100%;
+    padding-right: 10px;
+    overflow: scroll;
+    
+ }
+ .khung_ten{
+    width: 100%;
+    height:30px;
+    display: flex;
+ }
+ .name{
+    font-size: 14px;
+    font-weight: 700;
+ }
+ .icon{
+   
+    width: 12px;
+    height: 1px;
+    background-color: #000000;
+    margin-left: 153px;
+    margin-top: 24px;
+ }
+ .name:hover {
+    color: #f6851d;
+ }
+ .name:hover + .icon{
+    background-color: #f6851d;
+ }
+ 
+ .khung_loc{
+    width: 100%;
+    height: 27px;
+    margin-left: -40px;
+    list-style: none;
+ }
+ .vungchon{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: #a2a2a2;
+ }
+ .vungchon:hover{
+    color: #f6851d;
+ }
+ .checkb{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+ }
+ .o_check{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    top: 2px;
+ }
+ .o_check::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #a2a2a2;
+    border-radius: 2px;
+    top: 6px;
+    transform: translateY(-50%);
+ }
+ .o_check::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    border: solid #ffffff;
+    display: inline-block;
+    transform: rotate(45deg);
+    top: -2px;
+    left: 5px;
+    border-width: 0px 2px 2px 0px;
+    display: none;
+
+ }
+.vungchon:hover > .o_check::before{
+    border: 1px solid #f6851d;
+}
+input:checked + .o_check{
+    &::after{
+        display: block;
+    }
+    &::before{
+        border: solid #f6851d;
+        background-color: #f6851d;
+    }
+}
+.page{
+    width: 855px;
+    height: 76px;
+    background-color: #c0972f;
+}

@@ -1,0 +1,164 @@
+.fontchu{
+    font-family: 'Exo', sans-serif;
+}
+.khung_tintuc{
+    width: 1519px;
+    height: 537px;
+    background-color: #f2f2f2;
+    
+}
+.tintuc{
+    width: 1120px;
+    height:100%;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.name{
+    font-weight: 600;
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.name:hover{
+    color: #f6851d;
+}
+.khung_baiviet{
+    width: 1140px;
+    height: 471px;
+    margin-left : -10px;
+    background-color: #f2f2f2;
+    display: flex;
+    
+}
+.baiviet{
+    width: 380px;
+    height: 96%;
+    padding: 20px 10px 0 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 0px 0px;
+}
+.noidung{
+    width: 360px;
+    height: 453px;
+    margin: auto;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+.noidung::before{
+    content: '';
+    width: 360px;
+    height: 453px;
+    position: absolute;
+    opacity: 0.1;
+    box-shadow: 30px 30px 10px;
+
+    -moz-box-shadow: 30px 30px 10px;
+
+    -webkit-box-shadow: 10px 12px 22px;
+
+    -o-box-shadow: 30px 30px 10px;
+
+    -ms-box-shadow: 30px 30px 10px;
+}
+.khung_anh{
+    width: 100%;
+    height:230px;
+     position: relative;
+     overflow: hidden;
+}
+.khung_anh::after{
+    content: '';
+    width: 100%;
+    height: 70px;
+    background-color:#ffffff;
+    border-top: 2px solid #f6851d;
+    position: absolute;
+    bottom: -38px;
+    transform: skewY(-5deg);
+
+}
+.anhblog1{
+    width: 100%;
+    height:230px;
+    position: absolute;
+}
+.ngaydang{
+    position: absolute;
+    width: 80px;
+    height: 61px;
+    background-color: #f6851d;
+    border-radius: 5px;
+    left: 245px;
+    top: 150px;
+    z-index: 1;
+}
+span{
+    
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: 10px 0px 0px 0px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+   
+}
+.infor{
+    width: 320px;
+    height: 193px;
+    margin: 10px 20px 20px 20px;
+   
+}
+.tittle{ 
+    position: relative;
+    line-height: 1.4;
+    font-weight: 600;
+    text-decoration: none;
+    color:black;
+    font-size: 17px;
+    margin-bottom: 10px;
+    max-height: 47px;
+    max-height: 47px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: unset;
+}
+.tittle:hover{
+    color: #f6851d;
+}
+p{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+.xemthem{
+    position: relative;
+    width: 70px;
+    height: 39px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#f6851d;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0px 20px 0px 20px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 30px;
+}
+.xemthem:hover{
+    background-color: #f6851d;
+    color: #ffffff;
+}
