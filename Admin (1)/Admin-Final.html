@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="style.js"></script>
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Admin-Final.css">
+	<script src="Admin-Final.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <h1 id="trang"><i class='bx bxs-smile'></i> AdminCamping</h1>
+        <i class='bx bx-search-alt-2'></i>
+        <input type="text" id="productName" name="productName placehoder" placeholder="Tìm kiếm...">
+        <img src="../picture/human1.png" alt="User">
+    </div>
+    <div class="display">
+      <div class="column-1">
+            <p id="Fullname-Intro" ><strong>Xin chào, </strong></p>
+            <p class="type">Main</p>
+            <div class="Intro" id="v-pill-tab" role ="button" aria-orientation="vertical">
+                <button onclick="myFunction('BDK-tab'); toggleClass(this, 'item', 'clicked')" class="item">Bảng điều khiển</button>
+                <button onclick="myFunction('KH-tab'); toggleClass(this, 'item', 'clicked')" class="item">Khách hàng</button>
+                <button onclick="myFunction('SP-tab'); toggleClass(this, 'item', 'clicked')" class="item">Sản phẩm</button>
+                <button onclick="myFunction('DH-tab'); toggleClass(this, 'item', 'clicked')" class="item">Đơn hàng</button>
+                <button onclick="myFunction('TK-tab'); toggleClass(this, 'item', 'clicked')" class="item">Thống kê</button>
+            </div>
+            <p class="type">Other</p>
+            <div>
+                <button onclick="" class="Setting"><i class='bx bxs-cog'></i> Cài đặt</button>
+                <button onclick="confirmLogout()" class="Logout"><i class='bx bx-log-out'></i> Đăng xuất</button>
+            </div> 
+        </div>
+
+        <div class="column-2">
+            <div id="BDK-tab" class="content">
+                <h1>Bảng điều khiển</h1>
+                <div class="container">
+                    <div class="change-bxs">
+                        <div class="inside">
+                            <i class='bx bxs-calendar-check' ></i>
+                            <span class="text">
+                                <h3>1020</h3>
+                                <p>Đơn đặt hàng mới</p>
+                            </span>
+                        </div>    
+                    </div>
+    
+                    <div class="change-bxs">
+                        <div class="inside">
+                            <i class='bx bxs-group' ></i>
+                            <span class="text">
+                                <h3>2834</h3>
+                                <p>Lượng khách hàng</p>
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="change-bxs">
+                        <div class="inside">
+                            <i class='bx bxs-dollar-circle' ></i>
+                            <span class="text">
+                                <h3>3.100.000₫</h3>
+                                <p>Tổng doanh thu</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-data">
+                    <div class="order">
+                        <div class="head">
+                            <h3>Đơn đặt hàng gần đây</h3>
+                            <i class='bx bx-search' ></i>
+                            <i class='bx bx-filter' ></i>
+                        </div>
+                        <table class="Table">
+                            <tr>
+                                <th>Người dùng</th>
+                                <th>Ngày đặt hàng</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../picture/human1.png">
+                                    <p>Henry</p>
+                                </td>
+                                <td>01-10-2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../picture/human2.png">
+                                    <p>Jim</p>
+                                </td>
+                                <td>18-09-2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../picture/human3.png">
+                                    <p>Mr.White</p>
+                                </td>
+                                <td>15-07-2023</td>
+                                <td><span class="status process">Process</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../picture/human5.png">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>03-18-2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../picture/human4.png">
+                                    <p>Alan Walker</p>
+                                </td>
+                                <td>19-20-2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="KH-tab" class="content">
+                <h1> <strong>Khách hàng</strong> </h1>
+                <div class="container">
+                    <button onclick="window.location.href='../ThemKhach.html'">Thêm Người Dùng <i class='bx bx-plus'></i> </button>
+                </div>
+                <br>
+                <div class="container-table">
+                    <table class="Table">
+                        <tr>
+                            <th></th>
+                            <th>Họ tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Địa chỉ</th>
+                            <th>SĐT</th>
+                            <th>Nhóm khách hàng</th>
+                            <th>Tác vụ</th>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human1.png" alt="human1" class="human"></div></td>
+                            <td>Nguyễn Văn A</td>
+                            <td>15/05/1990</td>
+                            <td>123 Đường ABC, Quận XYZ</td>
+                            <td>0123456789</td>
+                            <td>Thường</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human2.png" alt="human2" class="human"></div></td>
+                            <td>Trần Thị B</td>
+                            <td>20/09/1985</td>
+                            <td>456 Đường DEF, Quận LMN</td>
+                            <td>0987654321</td>
+                            <td>Thường</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human3.png" alt="human3" class="human"></div></td>
+                            <td>Lê Văn C</td>
+                            <td>03/12/1995</td>
+                            <td>789 Đường GHI, Quận PQR</td>
+                            <td>0365987412</td>
+                            <td>Tiềm năng</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human4.png" alt="human4" class="human"></div></td>
+                            <td>Phạm Thị D</td>
+                            <td>25/06/1988</td>
+                            <td>321 Đường JKL, Quận STU</td>
+                            <td>0741852963</td>
+                            <td>Thường</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human5.png" alt="human5" class="human"></div></td>
+                            <td>Hoàng Văn E</td>
+                            <td>10/11/1992</td>
+                            <td>234 Đường MNO, Quận VWX</td>
+                            <td>0312465789</td>
+                            <td>Tiềm năng</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human6.png" alt="human6" class="human"></div></td>
+                            <td>Đặng Thị F</td>
+                            <td>05/04/1987</td>
+                            <td>567 Đường PQR, Quận YZ</td>
+                            <td>0897245631</td>
+                            <td>Thường</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human7.png" alt="human7" class="human"></div></td>
+                            <td>Mai Văn G</td>
+                            <td>18/07/1993</td>
+                            <td>890 Đường STU, Quận ABC</td>
+                            <td>0524368971</td>
+                            <td>Tiềm năng</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human8.png" alt="human8" class="human"></div></td>
+                            <td>Vũ Thị H</td>
+                            <td>30/01/1986</td>
+                            <td>123 Đường XYZ, Quận DEF</td>
+                            <td>0768593412</td>
+                            <td>Tiềm năng</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human9.png" alt="human9" class="human"></div></td>
+                            <td>Ngô Văn I</td>
+                            <td>14/08/1990</td>
+                            <td>456 Đường LMN, Quận GHI</td>
+                            <td>0981345672</td>
+                            <td>Tiềm năng</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div><img src="../picture/human10.png" alt="human10" class="human"></div></td>
+                            <td>Lý Thị K</td>
+                            <td>22/03/1984</td>
+                            <td>789 Đường UVW, Quận XYZ</td>
+                            <td>0326574891</td>
+                            <td>Thường</td>
+                            <td>
+                                <button onclick="window.location.href='CSKhach.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                                <button onclick="toggleLockIcon(this)"class="no-border" >
+                                    <i class='bx bxs-lock-open-alt'></i>
+                                </button>
+                            </td>
+                        </tr>
+                        
+                        <!-- More rows as needed -->
+                    </table>
+                </div>
+               
+            </div>
+
+            <div id="SP-tab" class="content">
+                <h1> <strong>Sản phẩm </strong></h1>
+                <div class="container">
+                    <button onclick="window.location.href='../SanPham/ThemSP.PHP'">Thêm Sản Phẩm <i class='bx bx-plus'></i> </button>
+                </div>
+                <br>
+                <table class="Table">
+                    <tr>
+                        <th>Danh mục</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Thương hiệu</th>
+                        <th>Ảnh</th>
+                        <th>Giá trị đơn hàng</th>
+                        <th>Tác vụ</th>
+                    </tr>
+                    <tr>
+                        <td>Lều trại</td>
+                        <td>LT-BD-8095-01</td>
+                        <td>Glamping-Blackdog Pyramid Tent</td>
+                        <td>Blackdog</td>
+                        <td><div><img src="../picture/Glamping-tent.webp" alt="Glamping-tent"></div></td>
+                        <td>3.100.000₫</td>
+                        <td>
+                            <button onclick="window.location.href='CSSP.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                            <button onclick="confirmDeleteSP()" class="no-border">
+                                <i class='bx bxs-minus-circle'></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nấu ăn</td>
+                        <td>DCNA-NH-8316</td>
+                        <td>BBQ Naturehike</td>
+                        <td>Naturehike</td>
+                        <td><div><img src="../picture/BBQ-Naturehike.webp" alt="BBQ-Naturehike"></div></td>
+                        <td>965.000₫</td>
+                        <td>
+                            <button onclick="window.location.href='CSSP.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                            <button onclick="confirmDeleteSP()" class="no-border">
+                                <i class='bx bxs-minus-circle'></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TBYT</td>
+                        <td>BVAT-1L-8005</td>
+                        <td>Túi Sơ Cứu First Aid Kit</td>
+                        <td>Đang cập nhật</td>
+                        <td><div><img src="../picture/First-Aid-kit.webp" alt="First-Aid-kit"></div></td>
+                        <td>920.000₫</td>
+                        <td>
+                            <button onclick="window.location.href='CSSP.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                            <button onclick="confirmDeleteSP()" class="no-border">
+                                <i class='bx bxs-minus-circle'></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phụ kiện</td>
+                        <td>PK-NH-8261-01</td>
+                        <td>Găng Tay Dã Ngoại Chống Trượt Naturehike Gl10</td>
+                        <td>NatureHike</td>
+                        <td><div><img src="../picture/Gang tay da ngoai.webp" alt="Gang tay da ngoai"></div></td>
+                        <td>175.000₫</td>
+                        <td>
+                            <button onclick="window.location.href='CSSP.html'" class="no-border"><i class='bx bxs-edit'></i></button>
+                            <button onclick="confirmDeleteSP()" class="no-border">
+                                <i class='bx bxs-minus-circle'></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </table>
+            </div>
+
+           
+
+            <div id="DH-tab" class="content">
+                <h1>Đơn hàng</h2>
+                    <form id="order">
+                        <label for="productName">Mã đơn hàng:</label>
+                        <input type="text" id="productName" name="productName" required>
+                
+                        <label for="time">Khoảng thời gian:</label>
+                        <select id="time" name="time">
+                            <option value="daily">Hàng ngày</option>
+                            <option value="weekly">Hàng tuần</option>
+                            <option value="monthly">Hàng tháng</option>
+                        </select>
+                
+                        <button type="button" onclick="Statistics()">Thống kê</button>
+                    </form>
+                
+                    <table id="OrderTable">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Hình thức giao hàng</th>
+                                <th>Trạng thái</th>
+                                <th>Số lượng</th>
+                                <th>Giá trị đơn hàng</th>
+                                <th>Khách hàng phải trả</th>
+                                <th>Hạn xác nhận</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>02772</td>
+                                <td>Giao từ nước ngoài</td>
+                                <td>
+                                    <select id="process1" name="process1">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>2</td>
+                                <td>10,000,000</td>
+                                <td>9,000,000</td>
+                                <td>28/9/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02773</td>
+                                <td>Giao nhanh trong nước</td>
+                                <td>
+                                    <select id="process2" name="process2">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>5</td>
+                                <td>25,000,000</td>
+                                <td>23,000,000</td>
+                                <td>29/9/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02774</td>
+                                <td>Giao nhanh quốc tế</td>
+                                <td>
+                                    <select id="process3" name="process3">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>3</td>
+                                <td>15,000,000</td>
+                                <td>13,500,000</td>
+                                <td>30/9/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02775</td>
+                                <td>Giao tiết kiệm trong nước</td>
+                                <td>
+                                    <select id="process4" name="process4">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>1</td>
+                                <td>5,000,000</td>
+                                <td>4,500,000</td>
+                                <td>1/10/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02776</td>
+                                <td>Giao từ nước ngoài</td>
+                                <td>
+                                    <select id="process5" name="process5">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>4</td>
+                                <td>20,000,000</td>
+                                <td>18,000,000</td>
+                                <td>2/10/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02777</td>
+                                <td>Giao tiết kiệm quốc tế</td>
+                                <td>
+                                    <select id="process6" name="process6">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>6</td>
+                                <td>30,000,000</td>
+                                <td>27,000,000</td>
+                                <td>3/10/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02778</td>
+                                <td>Giao nhanh trong nước</td>
+                                <td>
+                                    <select id="process7" name="process7">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>3</td>
+                                <td>15,000,000</td>
+                                <td>13,500,000</td>
+                                <td>4/10/2023</td>
+                            </tr>
+                            <tr>
+                                <td>02779</td>
+                                <td>Giao nhanh quốc tế</td>
+                                <td>
+                                    <select id="process8" name="process8">
+                                        <option class="unprocessed" value="unprocessed">Chưa xử lí</option>
+                                        <option class="processed" value="processed">Đã xử lí</option>
+                                        <option class="completed" value="completed">Đã hoàn thành</option>
+                                    </select>
+                                </td>
+                                <td>5</td>
+                                <td>25,000,000</td>
+                                <td>23,000,000</td>
+                                <td>5/10/2023</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5"><strong>Tổng tiền:</strong></td>
+                                <td colspan="2"><strong>1.000.000.000</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+
+            <div id="TK-tab" class="content">
+                <h1>Thống kê kinh doanh</h2>
+
+                    <form id="business">
+                        <label for="productName">Tên sản phẩm:</label>
+                        <input type="text" id="productName" name="productName" required>
+                
+                        <label for="time">Khoảng thời gian:</label>
+                        <select id="time" name="time">
+                            <option value="daily">Hàng ngày</option>
+                            <option value="weekly">Hàng tuần</option>
+                            <option value="monthly">Hàng tháng</option>
+                        </select>
+                
+                        <button type="button" onclick="Statistics()">Thống kê</button>
+                    </form>
+                
+                    <table id="businessTable">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã hàng</th>
+                                <th>Tên hàng</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                                <th>Ngày nhập</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>ABC123</td>
+                                <td>Sản phẩm A</td>
+                                <td>100</td>
+                                <td>10.00</td>
+                                <td>1000.00</td>
+                                <td>2023-11-14</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>DEF456</td>
+                                <td>Sản phẩm B</td>
+                                <td>75</td>
+                                <td>15.50</td>
+                                <td>1162.50</td>
+                                <td>2023-11-15</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>GHI789</td>
+                                <td>Sản phẩm C</td>
+                                <td>50</td>
+                                <td>20.25</td>
+                                <td>1012.50</td>
+                                <td>2023-11-16</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>JKL012</td>
+                                <td>Sản phẩm D</td>
+                                <td>120</td>
+                                <td>8.75</td>
+                                <td>1050.00</td>
+                                <td>2023-11-17</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>MNO345</td>
+                                <td>Sản phẩm E</td>
+                                <td>90</td>
+                                <td>12.60</td>
+                                <td>1134.00</td>
+                                <td>2023-11-18</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>PQR678</td>
+                                <td>Sản phẩm F</td>
+                                <td>65</td>
+                                <td>18.00</td>
+                                <td>1170.00</td>
+                                <td>2023-11-19</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>STU901</td>
+                                <td>Sản phẩm G</td>
+                                <td>110</td>
+                                <td>9.50</td>
+                                <td>1045.00</td>
+                                <td>2023-11-20</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>VWX234</td>
+                                <td>Sản phẩm H</td>
+                                <td>80</td>
+                                <td>14.20</td>
+                                <td>1136.00</td>
+                                <td>2023-11-21</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>YZA567</td>
+                                <td>Sản phẩm I</td>
+                                <td>95</td>
+                                <td>11.75</td>
+                                <td>1116.25</td>
+                                <td>2023-11-22</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>BCD890</td>
+                                <td>Sản phẩm J</td>
+                                <td>60</td>
+                                <td>17.00</td>
+                                <td>1020.00</td>
+                                <td>2023-11-23</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5"><strong>Tổng tiền:</strong></td>
+                                <td colspan="2"><strong>1.000.000.000</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

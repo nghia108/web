@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Final/Final/CSS/LOGIN.CSS">
+    <title>Đăng ký</title>
+    <script src="/Final/Final/JS/style.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="signup-form">
+            <h2 class="signup-heading">Đăng ký</h2>
+            <button class="signup-social">
+                <ion-icon name="logo-google" class="logo"></ion-icon>
+                <!-- <i class="fa-brands fa-google signup-social-icon"></i> -->
+                <span class="signup-social-text">Sign up With Google</span>
+            </button>
+            <button class="signup-social2">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <span class="signup-social-text">Sign up With Facebook</span>
+            </button>
+            <div class="signup-or"><span>OR</span> 
+                <br>
+                <div>
+                    <form id="signup" autocomplete="off" action="#" name="myForm">
+                        
+                        <input type="text" placeholder="Full name" id="Fullname" class="signup-input" required>
+                        <br>
+                        
+                        <input type="email" placeholder="Email" id="email" class="signup-input" required>
+                        <br>
+                        
+                        <input type="text" placeholder="Username" id="Username" class="signup-input" required>
+                        <br>
+                        
+                        <input type="password" placeholder="Password" id="Password" class="signup-input" required>
+                        <br>
+                        
+                        <input type="password" placeholder="Repeat password" id="RepeatPassword" class="signup-input" required>
+                        <br>
+                        
+                        <input type="text" placeholder="Address" id="Address" class="signup-input" required>
+                        <br>
+                        <button class="signup-submit" type="button" onclick="signup()">Sign Up</button>
+                    </form>
+
+                    <p class="signup-already"><span>Already have an account? <a href="/Final/Final/HTML/Login.html">Login</a></span>
+                    
+                </div>
+            </div>        
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+.content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.display{
+    margin-top: 30px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex
+}
+
+.column-1{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 25%;
+    
+}
+
+.Intro{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+
+.product-input{
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+    padding: 25px;
+    border-radius: 14px;
+    background-color: #f2f3f5;
+    outline: none;
+    border: 0;
+    font-family: "Popins", sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+.Submit {
+    float: right;
+    /*Thêm các thuộc tính khác tùy ý*/
+    background-color: orange; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+  }
+
+    
+
+.item {
+    border-style:none ;
+    border-radius: 5px;
+    background-color: white; /* Đặt màu nền là trong suốt */
+    color: #636363; /* Đặt màu chữ là đen */
+    font-size: 16px; /* Đặt kích thước chữ là 16px */
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 200px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.item.clicked {
+    background-color: orange; /* Đặt màu nền là màu cam */
+    color: white; /* Đặt màu chữ là màu trắng */
+}
+
+.item.clicked:hover {
+    color: white; /* Khi di chuột qua nút đã được nhấp vào, màu chữ vẫn sẽ là màu trắng */
+}
+
+.item:hover {
+    color: orange; /* Khi di chuột qua, màu chữ sẽ thay đổi thành màu cam */
+    transition: 0.8s;
+}
+
+.column-2{
+    max-width: 75%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#TTTK-tab{
+    margin-top: 5px;
+    padding: 0;
+    display: block;
+    font-family: 'EXO', sans-serif;
+}
+
+#DHCB-tab{
+    margin-top: 5px;
+    padding: 0;
+    display: block;
+    font-family: 'EXO', sans-serif;
+}
+
+#SDC-tab{
+    margin-top: 5px;
+    padding: 0;
+    display: block;
+    font-family: 'EXO', sans-serif;
+  border-bottom: #6b6b6b;
+}
+
+
+p{
+    margin: 0 0 15px 0;
+}
+
+.link{
+    text-decoration: none;
+    color:orange;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#trang{
+    font-family: 'EXO', sans-serif;
+}
+
+#Fullname-Intro{
+    font-family: 'EXO', sans-serif;
+}

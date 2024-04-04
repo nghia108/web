@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="style.js"></script>
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Admin-Final.css">
+	<script src="Admin-Final.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <h1 id="trang"><i class='bx bxs-smile'></i> AdminHub</h3>
+    </div>
+    <button type="button" onclick="ReturnSP()" class="return"><i class='bx bx-chevron-left-circle'></i></button>
+    <div id="chinh-sua-SP" >
+        <h1>Chỉnh sửa thông tin sản phẩm</h1>
+        <br>
+        <form>
+            <div class="SP-picture">
+                <label for="imageInputEdit" class="custom-file-upload">
+                    <p class="UploadImage">Upload Image</p> 
+                </label>
+                <input type="file" id="imageInputEdit" name="image" accept="image/*" class="product-input" onchange="displayImage('imageInputEdit', 'imagePreviewEdit')" style="display: none;" />                      
+                <br>                    
+            </div>
+            <img id="imagePreviewEdit" src="../picture/Glamping-tent.webp" alt="Hình ảnh sản phẩm" style="max-width: 200px; max-height: 200px;">
+            <button onclick="removeImage('imagePreviewEdit')">Bỏ hình ảnh</button>
+            <br>
+            <input type="text" id="category" name="category" placeholder="Danh mục:" class="product-input" value="Lều trại">
+            <br>
+            <input type="text" id="productCode" name="productCode" placeholder="Mã sản phẩm:" class="product-input" value="LT-BD-8095-01">
+            <br>
+            <input type="text" id="productName" name="productName" placeholder="Tên sản phẩm:" class="product-input" value="Glamping-Blackdog Pyramid Tent">
+            <br>
+            <input type="text" id="brand" name="brand" placeholder="Thương hiệu:" class="product-input" value="Blackdog">
+            <br>
+            <input type="text" id="orderValue" name="orderValue" placeholder="Giá trị đơn hàng:" class="product-input" value="3.100.000₫">
+            <br>
+            <input type="text" id="Desscription" name="Desscription" placeholder="Giá trị đơn hàng:" class="product-input" value="Lều Kim tự tháp lục giác cho 3-4 người Blackdog BD-ZP003 cấu trúc kim tự tháp không gian rộng, cao nên rất thoáng. Chất liệu vải Oxford 150D phủ bạc chống tia cực tím UPF50+ và chống nước 3000mm. Lều thiết kế kim tự tháp, cấu trúc 2 lớp có thể sử dụng độc lập, lớp trong vải lưới thoáng và chống côn trùng">
+            <br>
+            <input type="text" id="quantity" name="quantity" placeholder="Số lượng" class="product-input" value="100">
+            <br>
+            <button type="button" onclick="ReturnSP2()" class="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Thanh Toán</title>
+    <link rel="stylesheet" type="text/css" href="checkout.css">
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <h1>Thông tin mua hàng</h1>
+            <form id="checkout-form">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="name">Họ và tên:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="phone">Số điện thoại:</label><br>
+                <input type="tel" id="phone" name="phone"><br>
+                <label for="address">Địa chỉ:</label><br>
+                <input type="text" id="address" name="address"><br>
+                <label for="city">Tỉnh thành:</label><br>
+                <input type="text" id="city" name="city"><br>
+                <label for="district">Quận huyện:</label><br>
+                <input type="text" id="district" name="district"><br>
+                <label for="ward">Phường xã:</label><br>
+                <input type="text" id="ward" name="ward"><br>
+                <label for="other-address">Giao hàng đến địa chỉ khác(nếu không có thì ghi "không"):</label><br>
+                <input type="text" id="other-address" name="other-address"><br>
+                <label for="note">Ghi chú (tùy chọn):</label><br>
+                <textarea id="note" name="note"></textarea><br>
+        </div>
+        <div class="column">
+            <h2>Vận chuyển</h2>
+            <p>Vui lòng nhập thông tin giao hàng</p>
+            <input type="text" id="other-address" name="other-address"><br>
+    
+            <h2>Thanh toán</h2>
+            <input type="radio" id="cod" name="payment" value="cod">
+            <label for="cod">Thanh toán khi giao hàng (COD)</label><br>
+            <input type="radio" id="momo" name="payment" value="momo">
+            <label for="momo">MOMO</label><br>
+            <input type="radio" id="tpbank" name="payment" value="tpbank">
+            <label for="tpbank">TPBank</label><br>
+        </div>
+        <div class="column">
+            <h1>Đơn hàng</h1>
+            <label for="discount-code">Nhập mã giảm giá:</label><br>
+            <input type="text" id="discount-code" name="discount-code"><br>
+            <p>Phí vận chuyển: 10.000đ</p>
+            <input type="submit" value="Đặt hàng">
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>

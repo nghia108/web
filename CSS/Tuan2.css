@@ -1,0 +1,140 @@
+.content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Thong-tin-SP{
+    margin-top: 30px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex
+}
+
+.column-1{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 25%;
+    
+}
+
+.Ban-SP{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+
+
+.item {
+    border-style:none ;
+    border-radius: 5px;
+    background-color: white; /* Đặt màu nền là trong suốt */
+    color: #0657a3; /* Đặt màu chữ là đen */
+    font-size: 16px; /* Đặt kích thước chữ là 16px */
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 200px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.item.clicked {
+    background-color: orange; /* Đặt màu nền là màu cam */
+    color: white; /* Đặt màu chữ là màu trắng */
+}
+
+.item.clicked:hover {
+    color: white; /* Khi di chuột qua nút đã được nhấp vào, màu chữ vẫn sẽ là màu trắng */
+}
+
+.item:hover {
+    color: orange; /* Khi di chuột qua, màu chữ sẽ thay đổi thành màu cam */
+    transition: 0.8s;
+}
+
+.column-2{
+    max-width: 75%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#home-tab{
+    margin-top: 5px;
+    padding: 0;
+    display: block;
+    font-family: 'EXO', sans-serif;
+}
+
+#profile-tab{
+    margin-top: 5px;
+    padding: 0;
+    display: block;
+    font-family: 'EXO', sans-serif;
+}
+
+#messages-tab{
+    margin-top: 5px;
+    padding: 0;
+    display: block;
+    font-family: 'EXO', sans-serif;
+}
+
+
+p{
+    margin: 0 0 15px 0;
+}
+
+.link{
+    text-decoration: none;
+    color:orange;
+    font-weight: bold;
+}
+
+.Table{
+    border-style: dashed;
+    box-sizing: border-box;
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-spacing: 0;
+    
+}
+
+.target{
+    font-weight: 600;
+}
+
+.value{
+    display: block;
+    margin-block-start: 1em;
+
+}
+
+td{
+    padding: 20px;
+    font-size: 14px;
+    text-align: left;
+    border: 1px;
+    border-style: solid;
+    border-color: #e1e1e1;
+    display: table-cell;
+    
+}
+   
+
+.picture-TTSP{
+    max-width: 836px;
+    max-height: 1196px;
+    max-width: 100%;
+    height: auto;
+}
+
+.picture-TTTH{
+    max-height: 205px;
+    max-width: 838px;
+    max-width: 100%;
+    height: auto;
+}

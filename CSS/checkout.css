@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.row{
+    width: 100%;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column {
+    margin-left: 30px;
+    margin-right: 5px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Styles for the information section */
+#checkout-form {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top:45%;
+}
+.mot{
+    width: 40%;
+}
+.hai{
+    width: 25%;
+}
+.ba{
+    width: 25%;
+}
+
+label {
+    display: block;
+    margin-bottom: -30px;
+    color: #555;
+    font-weight: bold;
+
+}
+.khung_chon{
+    display: flex;
+    margin-top: 10px;
+    
+}
+span{
+color: rgb(160, 15, 15);
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #959595;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #4CAF50;
+}
+
+/* CSS cho mục chọn địa chỉ giao hàng */
+#delivery-address {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #959595;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* CSS cho hiển thị màu khi chọn dropdown */
+#delivery-address:focus {
+    border-color: #007BFF; /* Màu sẽ thay đổi khi chọn dropdown */
+}
+
+
+/* Styles for the shipping and payment section */
+p {
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Styles for the order section */
+#discount-code {
+    margin-bottom: 10px;
+}
+
+/* Styles for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+

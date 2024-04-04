@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col1">
+            <img id="head_img" src="img/leu.jpg" alt="leu" onclick="openModal()">
+            <p><img id="search_icon" src="img/search.png" alt="">Click chuột lên hình để phóng to</p> 
+            <div class="slide">
+                <div class="button">
+                    <button type="button"  class="slick-arrow slick-prev"  onclick="prevImage()"><i class='bx bxs-chevron-left'></i></button>
+                    <button type="button" class="slick-arrow slick-next" onclick="nextImage()"><i class='bx bxs-chevron-right'></i></button>
+                </div>
+                    <div class="img_slide">
+                        <img class="myImage" src="img/leu1.webp" alt="" onclick="changeImage(0)">
+                        <img class="myImage" src="img/leu2.webp" alt="" onclick="changeImage(1)">
+                        <img class="myImage" src="img/leu3.webp" alt="" onclick="changeImage(2)">
+                        <img class="myImage" src="img/leu4.webp" alt="" onclick="changeImage(3)">
+
+                    </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal" onclick="closeModal()">
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="leu">
+            </div>
+        </div>        
+
+        <div class="col2">
+            <h1>Lều Xe Bán Tải Đa Năng Madfox Trucker</h1>
+            <p class="id_item">Mã sản phẩm: LT-MF-8120-01</p>
+            <h3 id="productPrice">2.990.000₫</h3>
+            <p><span id="label">Kích thước:</span> <span id="selectedSize"> </span></p><div class="pick_item">
+                <div class="item_1">
+                    <input id="size1" type="radio" name="size" value="Nhỏ">
+                    <label for="size1">Nhỏ</label>
+                </div>
+                <div class="item_2">
+                    <input id="size2" type="radio" name="size" value="Vừa">
+                    <label for="size2">Vừa</label>
+                </div>
+                <div class="item_3">
+                    <input id="size3" type="radio" name="size" value="Lớn">
+                    <label for="size3">Lớn</label>
+                </div>
+            </div>     
+            <div class="form_cart">
+                <div class="form_cart">
+                    <div class="custom_btn">
+                        <button class="btn_minus" onclick="decreaseQuantity()">-</button>
+                        <input type="text" value="1" id="quantityInput">
+                        <button class="btn_plus" onclick="increaseQuantity()">+</button> 
+                    </div>
+                    <button type="submit">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="fav_item" onclick="toggleFavorite()">
+                <img id="fav_icon" src="img/fav_icon.png" alt="">
+                <p id="fav_content">Thêm vào yêu thích</p>
+            </div>
+            <p class="content_item">Nổi bật với thiết kế cửa có thể mở thành mái hiên tiện lợi - Lều 4 người Madfox Trekker 4  được tối ưu diện tích sử dụng với 2 mái hiên có thể được tạo ra bởi 2 cửa đối diện nhau. Các đường may được xử lý ép seam chống thấm nước 3.000 mm, 2 cửa đối diện nhau giúp người trong lều dễ dàng di chuyển ra ngoài. 2 cửa có thể dựng lên thành 2 mái hiên, có thể sử dụng cho sinh hoạt, ăn uống nhóm nhỏ. (Sào chống mái hiên KHÔNG được đi kèm) Là mẫu lều dã ngoại, cắm trại dành thích hợp cho những chuyến đi cùng gia đình, bạn bè.</p>
+        </div>
+
+        <div class="col3">
+            <div class="service">
+                 <div class="hotline">
+                    <img src="img/telephone-call.png" alt="">
+                    <div class="text-content">
+                        <h4>Hotline hỗ trợ</h4>
+                        <p>123.123.123</p>
+                    </div>
+                 </div>
+                 <div class="ship">
+                    <img src="img/fast-delivery.png" alt="">
+                    <div class="text-content">
+                        <h4>Giao hàng nhanh chóng</h4>
+                        <p>Trong vòng 72h</p>
+                    </div>
+                 </div>
+                 <div class="time">
+                    <img src="img/time-count.png" alt="">
+                    <div class="text-content">
+                        <h4>Miễn phí đổi trả</h4>
+                        <p>Trong vòng 3 ngày</p>
+                    </div>
+                 </div>
+                 <div class="pay">
+                    <img src="img/payment-protection.png" alt="">
+                    <div class="text-content">
+                        <h4>Thanh toán bảo mật</h4>
+                        <p>Chấp nhận các loại thẻ</p>
+                    </div>
+                 </div>
+            </div>
+            <div class="payment_methods">
+                <h4>Thanh toán an toàn</h4>
+                <img src="img/product_payment.webp" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const radioButtons = document.querySelectorAll('input[name="size"]');
+        const selectedSizeSpan = document.getElementById('selectedSize');
+        const productPriceH3 = document.getElementById('productPrice');
+        const sizeToPriceMapping = {
+            'Nhỏ': '1.990.000₫',
+            'Vừa': '2.990.000₫',
+            'Lớn': '3.990.000₫'
+        };
+
+        radioButtons.forEach((radioButton) => {
+            radioButton.addEventListener('change', (event) => {
+                const selectedSize = event.target.value;
+                selectedSizeSpan.textContent = selectedSize;
+
+                if (selectedSize === 'Nhỏ' || selectedSize === 'Vừa' || selectedSize === 'Lớn') {
+                    selectedSizeSpan.style.color = 'orange';
+                } else {
+                    selectedSizeSpan.style.color = 'black';
+                }
+
+                productPriceH3.textContent = sizeToPriceMapping[selectedSize];
+            });
+        });
+        
+        function openModal() {
+    document.getElementById('myModal').style.display = 'flex';
+}
+
+function closeModal() { 
+    document.getElementById('myModal').style.display = 'none';
+}
+
+function toggleFavorite() {
+        var favContent = document.getElementById('fav_content');
+        var favIcon = document.getElementById('fav_icon');
+
+        if (favContent.textContent === 'Thêm vào yêu thích') {
+            favContent.textContent = 'Đã thêm vào yêu thích';
+            favIcon.src = 'img/heart-after.png'; 
+        } else {
+            favContent.textContent = 'Thêm vào yêu thích';
+            favIcon.src = 'img/fav_icon.png';
+        }
+    }
+function increaseQuantity() {
+            var quantityInput = document.getElementById('quantityInput');
+            var currentQuantity = parseInt(quantityInput.value);
+            quantityInput.value = currentQuantity + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById('quantityInput');
+            var currentQuantity = parseInt(quantityInput.value);
+
+            if (currentQuantity > 1) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+
+        function changeImage(index) {
+    currentIndex = index;
+    updateImage();
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+}
+
+var currentIndex = 0;
+var images = document.querySelectorAll('.img_slide img');
+var modalImage = document.getElementById('modalImage');
+
+function updateImage() {
+    var headImg = document.getElementById('head_img');
+    headImg.src = images[currentIndex].src;
+    modalImage.src = images[currentIndex].src;
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].classList.remove('selected');
+    }
+    images[currentIndex].classList.add('selected');
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].style.display = 'block';
+    }
+    images[currentIndex].style.display = 'block';
+}
+
+
+
+    </script>
+</body>
+</html>

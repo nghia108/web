@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" type="text/css" href="/Final/Final/CSS/LOGIN.CSS">
+    <script src="/Final/Final/JS/style.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="login-form">
+            <h1 class="login-heading">Đăng nhập</h1>
+            <form id="login">
+                <!-- <label for="Login-Username" class="login-label">Tên đăng nhập</label> -->
+                <input type="text" placeholder="Username" id="Login-Username" class="login-input" required>
+                <br>
+                <!-- <label for="Login-Password" class="login-label">Password</label> -->
+                <input type="password" placeholder="Password" id="Login-Password" class="login-input" required>
+                <!-- <button class="login-submit" type="button" onclick="login()">Đăng nhập</button> -->
+            </form>
+            <p id="tb"></p>
+            <button class="login-submit" type="button" onclick="login()">Đăng nhập</button>
+            <p class="login-already"><span>Chưa có tài khoản?</span> <a href="/Final/Final/HTML/Signup.html">Đăng ký ngay</a></p>
+            
+        </div>
+    </div>
+    <button class="nuthchuyen" onclick="window.location.href='/Final/Admin (1)/Login-Admin.html'" >Chuyển đến trang Login-Admin</button>
+    
+
+</body>
+</html>
